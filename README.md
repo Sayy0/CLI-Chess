@@ -20,29 +20,66 @@ This is a project for me to learn programming languages.
 -white:bool
 ```
 
-### Piece
+### *Piece* (abstract)
 ```
 -name:str
 -icon:str
--attacked:bool
+-killed:bool
+-white:bool
+
+Piece(isWhite:bool)
+
++isKilled():bool
++isWhite():bool
++canMove():bool
 ```
 
 ### Spot
 ```
 -piece:Piece
--empty:bool
+-x:int
+-y:int
+
+Spot(x:int, y:int, piece:Piece)
+
++replacePiece():void
++isEmpty():bool
++getX():int
++getY():int
 ```
 
 ### Board
 ```
--spot:spot[][]
+-spot:Spot[][]
+
+Board()
+
++resetBoard():void
++getSpot(x:int, y:int):Spot
++displayBoard():String
 ```
 
+### Move
+```
+-startSpot:Spot
+-endSpot:Spot
+-player:Player
+
+Move(startSpot:Spot, endSpot:Spot, player:Player)
+```
 
 ### Game
 ```
--boardState:Board
+-board:Board
+-player:Player
 -playerTurn:int
+
+Game()
+
++makeMove():bool
++nextPlayerTurn():void
++isGameEnd():bool
++isStalemate():bool
 ```
 
 
