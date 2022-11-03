@@ -1,29 +1,33 @@
 # Command Line Interface Chess Game
+
 This is a project for me to learn programming languages.
 
 ## Languages Used
-- JavaScript 
+
+-   JavaScript
 
 ---
+
 # **JavsScript**
 
-## Classes : 
+## Classes :
 
 ### Main file
-```
+
 ```
 
+```
 
 ### Player file
+
 ```
 -name:str
 -white:bool
 ```
 
-### *Piece* (abstract)
+### _Piece_ (abstract)
+
 ```
--name:str
--icon:str
 -killed:bool
 -white:bool
 
@@ -35,6 +39,7 @@ Piece(isWhite:bool)
 ```
 
 ### Spot
+
 ```
 -piece:Piece
 -x:int
@@ -49,6 +54,7 @@ Spot(x:int, y:int, piece:Piece)
 ```
 
 ### Board
+
 ```
 -spot:Spot[][]
 
@@ -60,6 +66,7 @@ Board()
 ```
 
 ### Move
+
 ```
 -startSpot:Spot
 -endSpot:Spot
@@ -69,6 +76,7 @@ Move(startSpot:Spot, endSpot:Spot, player:Player)
 ```
 
 ### Game
+
 ```
 -board:Board
 -player:Player
@@ -81,5 +89,3 @@ Game()
 +isGameEnd():bool
 +isStalemate():bool
 ```
-
-
